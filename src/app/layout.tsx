@@ -1,5 +1,6 @@
 import './globals.scss'
 import { Poppins } from 'next/font/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Poppins({ 
   subsets: ['latin'], 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <SpeedInsights/>
     </html>
   )
 }
